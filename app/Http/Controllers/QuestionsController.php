@@ -12,14 +12,16 @@ use Validator;
 class QuestionsController extends Controller
 {
     //
-    public function __construct()
+      public function __construct()
     {
         $this->middleware('auth');
     }
     
     // 
-    public function show($id){
-        dd('詳細画面');
-        return view('/');;
+     public function show($id){
+       // dd('詳細');
+       $questions = Question::orderBy('created_at', 'asc')->get();
+       $answers=Answer::orderBy('created_at', 'asc')->get();
+        return view('questions/show', ['questions' => $questions],['answers' => $answers]);
     }
 }
