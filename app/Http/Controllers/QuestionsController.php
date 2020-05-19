@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Question;
 use App\Answer;
-use APP\Cate;
+use App\Cate;
 use App\User;
 use Auth;
 use Validator;
@@ -46,8 +46,8 @@ class QuestionsController extends Controller
     }
     
     public function new(){
-        $cate = Cate::all();
-        return view('questions/create');
+        $cates = Cate::all();
+        return view('questions/create',['cates'=>$cates]);
     }
     
     public function create(Request $request){

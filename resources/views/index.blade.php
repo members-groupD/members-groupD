@@ -12,6 +12,6 @@
       </div>
      @endforeach
   </div>
-  <a href="{{ url('questions/create')}}" class="btn btn-info">質問する</a>
+  <a href="{{ url('questions/new')}}" class="btn btn-info">質問する</a>
 </div>
 @endsection
