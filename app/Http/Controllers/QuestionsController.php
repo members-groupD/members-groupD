@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Question;
 use App\Answer;
 use APP\Cate;
+use App\User;
 use Auth;
 use Validator;
 
@@ -22,6 +23,7 @@ class QuestionsController extends Controller
        // dd('詳細');
        $questions = Question::orderBy('created_at', 'asc')->get();
        $answers=Answer::orderBy('created_at', 'asc')->get();
-        return view('questions/show', ['questions' => $questions],['answers' => $answers]);
+       $users=User::get();
+        return view('questions/show', ['questions' => $questions],['answers' => $answers],['users'=>$users]);
     }
 }

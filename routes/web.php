@@ -27,5 +27,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // -----------------------------questions----------------------------------------------
 Route::get('/questions/show/{id}','QuestionsController@show');
-
 // -----------------------------answers----------------------------------------------
