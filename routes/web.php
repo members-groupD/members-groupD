@@ -19,13 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-
 // -----------------------------questions----------------------------------------------
+//質問一覧画面
+Route::get('/','QuestionsController@index');
 
+//質問・回答詳細画面
+Route::get('/question/show','QuestionsController@show');
+
+//質問新規画面
+Route::get('/questions/create', 'QuestionsController@new')->name('new');
 
 // -----------------------------answers----------------------------------------------
