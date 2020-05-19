@@ -28,5 +28,4 @@ Route::get('/','QuestionsController@index');
 Route::get('/questions/create', 'QuestionsController@new')->name('new');
 
 Route::get('/questions/show/{id}','QuestionsController@show');
-
 // -----------------------------answers----------------------------------------------

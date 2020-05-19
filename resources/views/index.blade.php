@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
+
 <div class="topPage">
   <div class="questionWrapper">
      @foreach ($questions as $question) 
