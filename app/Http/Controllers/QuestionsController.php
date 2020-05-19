@@ -19,13 +19,6 @@ class QuestionsController extends Controller
         // ログインしていなかったらログインページに遷移する（この処理を消すとログインしなくてもページを表示する）
         $this->middleware('auth');
     }
-
-    // ===ここからリストを新規作成する処理の追加（フォームへの遷移）===
-    public function new()
-    {
-        return view('questions/create');
-        // テンプレート「questions/create.blade.php」を表示します。
-    }
     
     // ===ここまでリストを新規作成する処理の追加（フォームへの遷移）===
 
@@ -52,4 +45,55 @@ class QuestionsController extends Controller
         return view('questions/show', ['questions' => $questions],['answers' => $answers],['users'=>$users]);
     }
     
+    public function new(){
+        $cate = Cate::all();
+        return view('questions/create');
+    }
+    
+    public function create(Request $request){
+    
+        $validator = Validator::make($request->all() , ['question_title' => 'required', 'content' => 'required']);
+
+        //バリデーションの結果がエラーの場合
+        if ($validator->fails())
+        {
+            return redirect()->back()->withErrors($validator->errors())->withInput();
+            // 上記では、入力画面に戻りエラーメッセージと、入力した内容をフォーム表示させる処理を記述しています
+        }
+        
+        $question = new Question;
+        $question->title = $request->title;
+        $question->content = $request->content;
+        $question->cate_id = $request->cate_id;
+        $question->user_id = Auth::user()->id;
+        $question->save();
+        
+        return redirect('/');
+    }
+    
+    public function edit($question_id){
+        $question = Question::find($question_id);
+        $cate = Cate::all();
+        return view('questions/edit',with(['question' => $question, 'cate'=>$cate]));
+    }
+    
+    public function update(Request $request){
+        $validator = Validator::make($request->all() , ['question_title' => 'required', 'content' => 'required']);
+
+        //バリデーションの結果がエラーの場合
+        if ($validator->fails())
+        {
+            return redirect()->back()->withErrors($validator->errors())->withInput();
+            // 上記では、入力画面に戻りエラーメッセージと、入力した内容をフォーム表示させる処理を記述しています
+        }
+        
+        $question = Question::find($question_id);
+        $question->title = $request->title;
+        $question->content = $request->content;
+        $question->cate_id = $request->cate_id;
+        $question->save();
+        
+        return redirect('/');
+    }
+
 }
