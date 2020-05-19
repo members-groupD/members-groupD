@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
 {
-    //
+    public function answers()
+    {
+        return $this->hasMany('App\Answer');
+    }
+    
+    public function cates()
+    {
+        return $this->hasOne('App\Cate');
+    }
 }
