@@ -29,3 +29,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/questions/show/{id}','QuestionsController@show');
 
 // -----------------------------answers----------------------------------------------
+Route::get('/questions/{question_id}/answer','AnswersController@new');
+Route::post('/questions/{question_id}/answer','AnswersController@create')->name('answer.create');
+Route::get('/answers/{question_id}/edit','AnswersController@edit');
