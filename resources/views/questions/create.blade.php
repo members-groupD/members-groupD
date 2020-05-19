@@ -15,7 +15,7 @@
       </div>
       <div class="col-sm-12"></div>
       
-      <label for="question" class="col-sm-3 control-label">質問内容</label> 
+      <label for="question" class="col-sm-3 control-label">質問内容：</label> 
       <div class="col-sm-6"> 
         <input type="text" name="content" class="form-control" value="{{ old('content') }}">
       </div>
