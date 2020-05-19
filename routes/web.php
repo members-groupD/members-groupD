@@ -26,6 +26,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 // -----------------------------questions----------------------------------------------
+Route::get('/questions/new','QuestionsController@new');
+Route::post('/questions/create', 'QuestionsController@create');
 
+Route::get('/questions/{question_id}','QuestionsController@edit');
+Route::post('/questions/edit','QuestionsController@update');
 
 // -----------------------------answers----------------------------------------------
