@@ -51,7 +51,7 @@ class QuestionsController extends Controller
     }
     
     public function create(Request $request){
-    
+
         $validator = Validator::make($request->all() , ['question_title' => 'required', 'content' => 'required']);
 
         //バリデーションの結果がエラーの場合
@@ -62,11 +62,12 @@ class QuestionsController extends Controller
         }
         
         $question = new Question;
-        $question->title = $request->title;
+        $question->title = $request->question_title;
         $question->content = $request->content;
         $question->cate_id = $request->cate_id;
         $question->user_id = Auth::user()->id;
         $question->save();
+        
         
         return redirect('/');
     }
