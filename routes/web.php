@@ -20,13 +20,14 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // -----------------------------questions----------------------------------------------
+ hirata
 //質問一覧画面
 Route::get('/','QuestionsController@index');
 
-//質問・回答詳細画面
-Route::get('/question/show','QuestionsController@show');
-
 //質問新規画面
 Route::get('/questions/create', 'QuestionsController@new')->name('new');
+=======
+Route::get('/questions/show/{id}','QuestionsController@show');
+ master
 
 // -----------------------------answers----------------------------------------------

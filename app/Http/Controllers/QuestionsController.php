@@ -11,8 +11,11 @@ use Validator;
 
 class QuestionsController extends Controller
 {
+ hirata
     //コンストラクタ （このクラスが呼ばれると最初にこの処理をする）
     public function __construct()
+
+ master
     {
         // ログインしていなかったらログインページに遷移する（この処理を消すとログインしなくてもページを表示する）
         $this->middleware('auth');
@@ -25,6 +28,7 @@ class QuestionsController extends Controller
         // テンプレート「questions/create.blade.php」を表示します。
     }
     
+ hirata
     // ===ここまでリストを新規作成する処理の追加（フォームへの遷移）===
 
     //===ここから質問の一覧表示をするための処理追加===
@@ -40,9 +44,14 @@ class QuestionsController extends Controller
     
     // ===ここまでリストの一覧表示をするための処理追加===
 
-    public function show($id){
-        dd('詳細画面');
-        return view('/');;
+
+    // 
+     public function show($id){
+       // dd('詳細');
+       $questions = Question::orderBy('created_at', 'asc')->get();
+       $answers=Answer::orderBy('created_at', 'asc')->get();
+        return view('questions/show', ['questions' => $questions],['answers' => $answers]);
+ master
     }
     
 }
