@@ -2,7 +2,7 @@
 @section('content')
 <div class="panel-body">
   <!-- バリデーションエラーの場合に表示 --> 
-  <form action="{{answers/question_id/edit }}" method="POST" class="form-horizontal">
+  <form action="{{ route('answer.edit', ['question_id'=>$question_id]) }}" method="POST" class="form-horizontal">
     {{csrf_field()}} 
       <div class="form-group"> 
         <label for="listing" class="col-sm-3 control-label">質問</label> 
@@ -19,7 +19,7 @@
          </form>
          </body>
           <button type="submit" class="btn btn-default">
-            <i class="glyphicon glyphicon-saved"></i> 回答
+            <i class="glyphicon glyphicon-saved"></i> 編集
           </button> 
           <button type="button" onclick="history.back()">戻る</button>
         </div>

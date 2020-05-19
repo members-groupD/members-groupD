@@ -20,6 +20,7 @@ class AnswersController extends Controller
       
   }
   public function edit($question_id){
-     // eval(\Psy\Sh());
+      //eval(\Psy\Sh());
+      return view('answers/edit',['question_id'=>$question_id]);
   }
 }
