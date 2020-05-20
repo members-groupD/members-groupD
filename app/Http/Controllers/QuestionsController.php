@@ -39,10 +39,12 @@ class QuestionsController extends Controller
     // 
      public function show($id){
        // dd('詳細');
-       $questions = Question::orderBy('created_at', 'asc')->get();
+       $question = Question::findOrFail($id);
+       $userId=$question->user_id;
+       $question['user']=User::findOrFail($userId);
        $answers=Answer::orderBy('created_at', 'asc')->get();
        $users=User::get();
-        return view('questions/show', ['questions' => $questions],['answers' => $answers],['users'=>$users]);
+        return view('questions/show', ['question' => $question],['answers' => $answers],['users'=>$users]);
     }
     
     public function new(){

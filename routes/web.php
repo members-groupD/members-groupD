@@ -33,5 +33,5 @@ Route::post('/questions/edit','QuestionsController@update');
 Route::get('/','QuestionsController@index');
 
 
-Route::get('/questions/show/{id}','QuestionsController@show');
+Route::get('/question/show/{id}','QuestionsController@show');
 // -----------------------------answers----------------------------------------------
