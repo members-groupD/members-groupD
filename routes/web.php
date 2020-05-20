@@ -37,9 +37,12 @@ Route::get('/','QuestionsController@index');
 // -----------------------------answers----------------------------------------------
 Route::get('/questions/{question_id}/answer','AnswersController@new');
 Route::post('/questions/{question_id}/answer/new','AnswersController@create')->name('answer.create');
-Route::get('/answers/{question_id}/edit','AnswersController@edit')->name('answer.edit');
+Route::get('/answers/{question_id}/edit','AnswersController@edit');
+
+Route::post('/answers/{question_id}/edit/new','AnswersController@end')->name('answer.edit');
 
 Route::get('/question/show/{id}','QuestionsController@show');
+
 // -----------------------------answers----------------------------------------------
 
   
