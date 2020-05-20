@@ -26,11 +26,10 @@ class QuestionsController extends Controller
     public function index()
     {
         // Questionモデルを介してデータベースからデータを取得。whereで取得したデータは配列になっている。
-        //eval(\Psy\Sh());
         $questions = Question::orderBy('created_at', 'asc')->get();// 全てのデータが取得できる
-        
+        $cates = Cate::orderBy('created_at', 'asc')->get();
         // コントローラからビューへの値の受け渡しをview関数を使って実施
-        return view('index', ['questions' => $questions]);
+        return view('index', ['questions' => $questions], ['cates' => $cates]);
     }
     
     // ===ここまでリストの一覧表示をするための処理追加===
@@ -98,11 +97,29 @@ class QuestionsController extends Controller
         
         return redirect('/');
     }
-    
+  
     public function destroy($question_id)
     {
         Question::destroy($question_id);
         return redirect('/');
-    }
+    }    
 
+    //-----------------------------------------------
+    //カテゴリー追加
+    public function cate_create(Request $request)
+    {
+        $validator = Validator::make($request->all() , ['cate' => 'required|max:255', ]);
+
+        if ($validator->fails())
+        {
+            return redirect()->back()->withErrors($validator->errors())->withInput();
+        }
+
+        $cates = new Cate;
+        $cates->cate = $request->cate;
+        $cates->save();
+        
+        // 「/」 ルートにリダイレクト
+        return redirect('/');
+    }
 }
