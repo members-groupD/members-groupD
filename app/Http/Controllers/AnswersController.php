@@ -23,4 +23,11 @@ class AnswersController extends Controller
       //eval(\Psy\Sh());
       return view('answers/edit',['question_id'=>$question_id]);
   }
+  
+  public function destroy($answer_id)
+    {
+        Answer::destroy($answer_id);
+        
+        return redirect('/');
+    }
 }
