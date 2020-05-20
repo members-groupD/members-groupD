@@ -24,9 +24,10 @@
       <label for="question" class="col-sm-3 control-label">カテゴリ：</label> 
       <div class="col-sm-6"> 
         <select name="cate_id" class="form-control custom-select">
-            @foreach ($cates as $cate)
-                <option value = "{{$cate->id}}">{{$cate->title}}</option>
-            @endforeach
+            <!--@foreach ($cates as $cate)-->
+            <!--    -->
+            <!--@endforeach-->
+            <option value = "1">1</option>
         </select>
       </div>
       
