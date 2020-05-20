@@ -44,5 +44,5 @@ Route::get('/question/show/{id}','QuestionsController@show');
 //質問削除機能
 Route::get('/answersdelete/{answer_id}', 'QuestionsController@destroy');
 // -----------------------------answers----------------------------------------------
-
-  
+//user詳細ページへ
+Route::get('/show','UsersController@show');
