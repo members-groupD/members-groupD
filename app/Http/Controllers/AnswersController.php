@@ -14,14 +14,6 @@ use App\User;
 class AnswersController extends Controller
 {
   public function new($question_id){
-<<<<<<< HEAD
-    dd("回答");
-      return view('answers/new',['question_id'=>$question_id]);
-  }
-  public function create($question_id){
-    
-      
-=======
      $question = Question::find($question_id);
       $questions = Question::findOrFail($question_id);
       $userId=$questions->user_id;
@@ -31,7 +23,6 @@ class AnswersController extends Controller
   public function create($question_id, Request $request){
     
        return redirect('/');
->>>>>>> bcf606cb05b39da721a6a067fed9a40accda6c27
   }
   public function edit($question_id){
       //eval(\Psy\Sh());
