@@ -1,1 +1,65 @@
 @import "vars";
+
+// 詳細一覧部分
+.bodybox{
+    margin:50px auto;
+    width:80%;
+    max-width:1200px;
+    text-align:center;
+}
+.questionbox{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    flex-warp:wrap;
+    .question{
+        width:70%;
+        text-align:left;
+        ul{
+            padding:0;
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+            li:first-child{
+                font-weight:800;
+                color:$blueColor;
+                font-size:32px;
+                font-family: $font2;
+            }
+            li:last-child{
+                width:100px;
+                margin:0;
+                text-align:center;
+                 font-family: $font1;
+            }
+        }
+        p{
+            font-size:20px;
+             font-family: $font1;
+        }
+    }
+    .questioner{
+        width:20%;
+        max-width:240px;
+        padding:4%;
+        border-radius:10px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+        font-family: $font1;
+        font-weight:bold;
+        p:nth-child(2){
+            font-size:24px;
+            margin:10px auto;
+        }
+    }
+}
+.answers{
+    margin:36px auto;
+    text-align:left;
+    font-family: $font2;
+    >p{
+        font-weight:800;
+        color:$yellowColor;
+        font-size:32px;
+         font-family: $font2;
+    }
+}
