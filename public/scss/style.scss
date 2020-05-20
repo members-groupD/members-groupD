@@ -1,2 +1,96 @@
+
+// indexindex　header footerのcss 共通のＣＳＳ
+@import "vars";
+li{
+    list-style-type:none !important;
+}
+ul{
+    padding:0;
+}
+.tags{
+    with:100px;
+    border-radius:10px;
+    color:#ffffff;
+     font-family: $font1;
+}
+.phptag{
+    background-color:#8993c1;
+}
+.laraveltag{
+   background-color:#fc4f3d; 
+}
+.csstag{
+    background-color:#1F5FAA;
+}
+.sasstag{
+    background-color:#C15D8E;
+}
+.blueBtn a{
+    background: #4962ea;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 10px 30px;
+    border-radius:10px;
+    font-family: $font2;
+}
+//header
+.header{
+    background-color: #fff;
+    box-shadow:0 0 10px 3px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding:5px 0;
+    display: flex;
+    justify-content: space-between;
+    .logo{
+        border:1px solid red;
+    }
+}
+.navbar-brand span{
+    font-size: 30px;
+    font-weight:bold;
+    font-family:$font2;
+    margin:0 4px;
+    text-shadow: 4px 2px 3px  rgba(0, 0, 0, 0.3);
+  &:first-child{
+      color:$blueColor;
+  }
+  &:nth-child(2){
+      color:$yellowColor;
+  }
+  &:last-child{
+      color:$blueColor;
+  }
+}
+
+.accountbox{
+  display:flex;
+  align-items:center;
+}
+.count{
+    margin-right:15px;
+    display: flex;
+    justify-content: space-around; 
+    align-items:center;
+    li{
+        a{
+            color:$blueColor !important;
+            font-weight:bold;
+            font-size:16px;
+            font-family: $font1;
+        }
+        &:last-child{
+            margin-left:4px;
+        }
+    }
+}
+// footer
+
 // indexindex　header footerのcss
 @import "vars";
+.category{
+	float:right;
+}
+.cate_hidden{
+	opacity:1;
+}
