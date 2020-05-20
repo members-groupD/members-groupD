@@ -41,7 +41,7 @@
      @endfor
     </div>
     <div>
-        <p><a href="{{ url('/answer/show', $question->id) }}">回答します</a></p>
+        <p><a href="/questions/{{$question->id}}/answer">回答します</a></p>
     </div>
   </div>
 </div>

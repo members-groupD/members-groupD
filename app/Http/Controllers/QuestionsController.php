@@ -97,7 +97,13 @@ class QuestionsController extends Controller
         
         return redirect('/');
     }
-    
+  
+    public function destroy($question_id)
+    {
+        Question::destroy($question_id);
+        return redirect('/');
+    }    
+
     //-----------------------------------------------
     //カテゴリー追加
     public function cate_create(Request $request)
