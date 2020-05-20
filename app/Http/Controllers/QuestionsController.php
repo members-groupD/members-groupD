@@ -41,11 +41,17 @@ class QuestionsController extends Controller
     // 
      public function show($id){
        // dd('詳細');
-       $questions = Question::orderBy('created_at', 'asc')->get();
+       $question = Question::findOrFail($id);
+       $userId=$question->user_id;
+       $question['user']=User::findOrFail($userId);
        $answers=Answer::orderBy('created_at', 'asc')->get();
        $users=User::get();
+<<<<<<< HEAD
         return view('questions/show', ['questions' => $questions],['answers' => $answers],['users'=>$users]);
 
+=======
+        return view('questions/show', ['question' => $question],['answers' => $answers],['users'=>$users]);
+>>>>>>> b34d8db9817697d0bb2f931f217ce0b70363815d
     }
     
     public function new(){
@@ -92,11 +98,17 @@ class QuestionsController extends Controller
         }
         
         $question = Question::find($question_id);
-        $question->title = $request->title;
+        $question->title = $request->question_title;
         $question->content = $request->content;
         $question->cate_id = $request->cate_id;
         $question->save();
         
+        return redirect('/');
+    }
+    
+    public function destroy($question_id)
+    {
+        Question::destroy($question_id);
         return redirect('/');
     }
 
