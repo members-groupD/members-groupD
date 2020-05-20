@@ -25,9 +25,10 @@
       <div class="col-sm-6"> 
         <select name="cate_id" class="form-control custom-select">
             <!--@foreach ($cates as $cate)-->
-            <!--    -->
+            <!-- <option value = "{{$cate->id}}">{{$cate->title}}</option>   -->
             <!--@endforeach-->
-            <option value = "1">1</option>
+            <option value = "1">C</option>
+            <option value = "2">C++</option>
         </select>
       </div>
       
