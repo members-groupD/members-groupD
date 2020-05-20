@@ -98,5 +98,12 @@ class QuestionsController extends Controller
         
         return redirect('/');
     }
+    
+    public function destroy($question_id)
+    {
+        Question::destroy($question_id);
+        
+        return redirect('/');
+    }
 
 }
