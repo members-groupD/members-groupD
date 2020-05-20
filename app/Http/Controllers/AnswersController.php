@@ -39,4 +39,11 @@ class AnswersController extends Controller
     
        return redirect('/');
   }
+  
+  public function destroy($answer_id)
+    {
+        Answer::destroy($answer_id);
+        
+        return redirect('/');
+    }
 }
