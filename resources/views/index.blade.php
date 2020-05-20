@@ -7,7 +7,7 @@
      @foreach ($questions as $question) 
       <div class="question">
         <div class="question_header">
-          <h2 class="question_header_title"><a href="{{ url('/question/show', $question->id) }}">{{ $question->title }}</a></h2>
+          <h2 class="question_header_title"><a href="{{ url('/questions/show', $question->id) }}">{{ $question->title }}</a></h2>
         </div>
       </div>
      @endforeach

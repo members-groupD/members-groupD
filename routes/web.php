@@ -36,10 +36,10 @@ Route::get('/','QuestionsController@index');
 
 // -----------------------------answers----------------------------------------------
 Route::get('/questions/{question_id}/answer','AnswersController@new');
-Route::post('/questions/{question_id}/answer/new','AnswersController@create')->name('answer.create');
+Route::get('/questions/{question_id}/answer/new','AnswersController@create')->name('answer.create');
 Route::get('/answers/{question_id}/edit','AnswersController@edit')->name('answer.edit');
 
-Route::get('/question/show/{id}','QuestionsController@show');
+Route::get('/questions/show/{id}','QuestionsController@show');
 // -----------------------------answers----------------------------------------------
 
   

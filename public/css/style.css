@@ -1,0 +1,79 @@
+li {
+  list-style-type: none !important;
+}
+ul {
+  padding: 0;
+}
+.tags {
+  with: 100px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Kosugi', sans-serif;
+}
+.phptag {
+  background-color: #8993c1;
+}
+.laraveltag {
+  background-color: #fc4f3d;
+}
+.csstag {
+  background-color: #1f5faa;
+}
+.sasstag {
+  background-color: #c15d8e;
+}
+.blueBtn a {
+  background: #4962ea;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+.header {
+  background-color: #fff;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.header .logo {
+  border: 1px solid red;
+}
+.navbar-brand span {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Kosugi Maru', sans-serif;
+  margin: 0 4px;
+  text-shadow: 4px 2px 3px rgba(0, 0, 0, 0.3);
+}
+.navbar-brand span:first-child {
+  color: #4962ea;
+}
+.navbar-brand span:nth-child(2) {
+  color: #ffcf24;
+}
+.navbar-brand span:last-child {
+  color: #4962ea;
+}
+.accountbox {
+  display: flex;
+  align-items: center;
+}
+.count {
+  margin-right: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.count li a {
+  color: #4962ea !important;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Kosugi', sans-serif;
+}
+.count li:last-child {
+  margin-left: 4px;
+}

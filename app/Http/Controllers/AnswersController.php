@@ -14,9 +14,11 @@ use Validator;
 class AnswersController extends Controller
 {
   public function new($question_id){
+    dd("回答");
       return view('answers/new',['question_id'=>$question_id]);
   }
   public function create($question_id){
+    
       
   }
   public function edit($question_id){
