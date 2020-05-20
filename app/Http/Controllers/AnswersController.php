@@ -13,5 +13,14 @@ use Validator;
 
 class AnswersController extends Controller
 {
-  
+  public function new($question_id){
+      return view('answers/new',['question_id'=>$question_id]);
+  }
+  public function create($question_id){
+      
+  }
+  public function edit($question_id){
+      //eval(\Psy\Sh());
+      return view('answers/edit',['question_id'=>$question_id]);
+  }
 }
