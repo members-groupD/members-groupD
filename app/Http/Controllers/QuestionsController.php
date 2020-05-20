@@ -76,7 +76,7 @@ class QuestionsController extends Controller
     public function edit($question_id){
         $question = Question::find($question_id);
         $cate = Cate::all();
-        return view('questions/edit',with(['question' => $question, 'cate'=>$cate]));
+        return view('questions/edit', with(['question' => $question, 'cates'=>$cate]));
     }
     
     public function update(Request $request){
@@ -89,7 +89,7 @@ class QuestionsController extends Controller
             // 上記では、入力画面に戻りエラーメッセージと、入力した内容をフォーム表示させる処理を記述しています
         }
         
-        $question = Question::find($question_id);
+        $question = Question::find($request->question_id);
         $question->title = $request->question_title;
         $question->content = $request->content;
         $question->cate_id = $request->cate_id;
