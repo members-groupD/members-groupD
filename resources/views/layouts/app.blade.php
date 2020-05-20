@@ -15,12 +15,15 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/answer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/question.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/question_create.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/question_edit.css') }}" rel="stylesheet">
+
     
     <!-- bootstrap -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <header class="header">

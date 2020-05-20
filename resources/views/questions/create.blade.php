@@ -17,7 +17,8 @@
       
       <label for="question" class="col-sm-3 control-label">質問内容：</label> 
       <div class="col-sm-6"> 
-        <input type="text" name="content" class="form-control" value="{{ old('content') }}">
+        <!--<input type="text" name="content" class="form-control" value="{{ old('content') }}">-->
+        <textarea name="content" class="form-control" rows=15>{{ old('question_title') }}</textarea>
       </div>
       <div class="col-sm-12"></div>
       
@@ -27,18 +28,23 @@
             <!--@foreach ($cates as $cate)-->
             <!-- <option value = "{{$cate->id}}">{{$cate->title}}</option>   -->
             <!--@endforeach-->
-            <option value = "1">C</option>
-            <option value = "2">C++</option>
+            <option value = "1">PHP</option>
+            <option value = "2">HTML</option>
         </select>
       </div>
       
     </div>
     
-    <div class="form-group"> 
+    <div class="form-group text-center"> 
       <div class="col-sm-offset-3 col-sm-6"> 
-        <button type="submit" class="btn btn-default">
-        質問する！ </button> 
+        <button type="submit" class="q-button">
+        質問する </button> 
       </div>
+      
+      <div class="col-sm-offset-3 col-sm-6 my-3">
+        <a class="back-button" href="/">　戻る　</a>
+      </div>
+      
     </div>
   </form>
 </div> 

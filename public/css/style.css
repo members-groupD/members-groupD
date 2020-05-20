@@ -1,3 +1,4 @@
+
 li {
   list-style-type: none !important;
 }
@@ -76,4 +77,10 @@ ul {
 }
 .count li:last-child {
   margin-left: 4px;
+
+.category {
+  float: right;
+}
+.cate_hidden {
+  opacity: 1;
 }

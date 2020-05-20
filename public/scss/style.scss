@@ -1,3 +1,4 @@
+
 // indexindex　header footerのcss 共通のＣＳＳ
 @import "vars";
 li{
@@ -84,3 +85,12 @@ ul{
     }
 }
 // footer
+
+// indexindex　header footerのcss
+@import "vars";
+.category{
+	float:right;
+}
+.cate_hidden{
+	opacity:1;
+}
