@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
+
 <div class="topPage">
   <div class="questionWrapper">
      @foreach ($questions as $question) 
@@ -11,6 +12,6 @@
       </div>
      @endforeach
   </div>
-  <a href="{{ url('questions/create')}}" class="btn btn-info">質問する</a>
+  <a href="{{ url('questions/new')}}" class="btn btn-info">質問する</a>
 </div>
 @endsection

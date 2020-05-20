@@ -21,12 +21,25 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // -----------------------------questions----------------------------------------------
 
+//質問新規画面
+Route::get('/questions/new','QuestionsController@new');
+Route::post('/questions/create', 'QuestionsController@create');
+
+//編集
+Route::get('/questions/{question_id}','QuestionsController@edit');
+Route::post('/questions/edit','QuestionsController@update');
+
 //質問一覧画面
 Route::get('/','QuestionsController@index');
 
-//質問新規画面
-Route::get('/questions/create', 'QuestionsController@new')->name('new');
 
-Route::get('/questions/show/{id}','QuestionsController@show');
 
 // -----------------------------answers----------------------------------------------
+Route::get('/questions/{question_id}/answer','AnswersController@new');
+Route::post('/questions/{question_id}/answer/new','AnswersController@create')->name('answer.create');
+Route::get('/answers/{question_id}/edit','AnswersController@edit')->name('answer.edit');
+
+Route::get('/question/show/{id}','QuestionsController@show');
+// -----------------------------answers----------------------------------------------
+
+  
