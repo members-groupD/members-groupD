@@ -91,11 +91,17 @@ class QuestionsController extends Controller
         }
         
         $question = Question::find($question_id);
-        $question->title = $request->title;
+        $question->title = $request->question_title;
         $question->content = $request->content;
         $question->cate_id = $request->cate_id;
         $question->save();
         
+        return redirect('/');
+    }
+    
+    public function destroy($question_id)
+    {
+        Question::destroy($question_id);
         return redirect('/');
     }
 

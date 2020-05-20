@@ -42,7 +42,11 @@
         @endfor 
     </div>
     <div>
+<<<<<<< HEAD
         <p class="blueBtn"><a href="/questions/{{$question->id}}/answer/new">回答します</a></p>
+=======
+        <p><a href="/questions/{{$question->id}}/answer">回答します</a></p>
+>>>>>>> bcf606cb05b39da721a6a067fed9a40accda6c27
     </div>
 </div>
 @endsection

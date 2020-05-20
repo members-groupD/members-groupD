@@ -20,7 +20,7 @@ class UsersController extends Controller
         $questions = Question::where('user_id', Auth::user()->id)
             ->orderBy('created_at', 'asc')
             ->get();
-            
+        
         //回答情報
         $answers = Answer::where('user_id', Auth::user()->id)
             ->orderBy('created_at', 'asc')
