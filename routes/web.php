@@ -32,14 +32,17 @@ Route::post('/questions/edit','QuestionsController@update');
 //質問一覧画面
 Route::get('/','QuestionsController@index');
 
-
-
+//質問削除機能
+Route::get('/questionsdelete/{question_id}', 'QuestionsController@destroy');
 // -----------------------------answers----------------------------------------------
 Route::get('/questions/{question_id}/answer','AnswersController@new');
 Route::post('/questions/{question_id}/answer/new','AnswersController@create')->name('answer.create');
 Route::get('/answers/{question_id}/edit','AnswersController@edit')->name('answer.edit');
 
 Route::get('/question/show/{id}','QuestionsController@show');
+
+//質問削除機能
+Route::get('/answersdelete/{answer_id}', 'QuestionsController@destroy');
 // -----------------------------answers----------------------------------------------
 
   
