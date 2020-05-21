@@ -43,14 +43,14 @@ class QuestionsController extends Controller
        $question = Question::findOrFail($id);
        $userId=$question->user_id;
        $question['user']=User::findOrFail($userId);
-       $answers=Answer::orderBy('created_at', 'asc')->get();
+       $question['my']= Auth::user()->id;
+       $answers=Answer::where('question_id', $id)->orderBy('created_at', 'asc')->get();
        $alls=User::get();
        foreach($answers as $answer){
-         
-           //dd($users);
+           $answerId=$answer->user_id;
+           $answer['user']=User::findOrFail($answerId);
        }
-       //dd($answers);
-        return view('questions/show', ['question' => $question],['answers' => $answers],['alls' => $alls]);
+        return view('questions/show', ['question' => $question],['answers' => $answers]);
 
     }
     
