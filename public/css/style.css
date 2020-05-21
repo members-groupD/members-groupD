@@ -89,11 +89,13 @@ ul {
 .count li:last-child {
   margin-left: 4px;
 }
+
 .registerBtn a, .loginBtn a {
   font-family: 'Kosugi', sans-serif;
   margin-right: 15px;
   color: #4962ea !important;
 }
+
 footer {
   position: absolute;
   bottom: 0px;

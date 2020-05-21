@@ -39,11 +39,13 @@
     <p>存在しません</p>
 @else
     @foreach($answers as $answer)
+
         <div class="title">
             <p>回答内容:{{$answer->content}}</p>
         </div>
         <div class="button">
-        <form action="{{ url("/answers/{$answer->question_id}/edit") }}" method="GET">
+        <form action="{{ url("/answers/{$answer->question_id}/edit/{$answer->id}") }}" method="GET">
+
         {{csrf_field()}}
             <button type="submit" class="btn btn-default">
                 編集

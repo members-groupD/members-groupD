@@ -45,16 +45,16 @@ class AnswersController extends Controller
     $answers->save();
     return redirect('/');
   }
-  public function edit($question_id){
+  public function edit($question_id,$answer_id){
       //eval(\Psy\Sh());
       $question = Question::find($question_id);
       $questions = Question::findOrFail($question_id);
       $userId=$questions->user_id;
       $questions['user']=User::findOrFail($userId);
-      //$answer = Answer::findOrFail($question_id);
-     // $userId=$answer->user_id;
+      $answer = Answer::find($answer_id);
+      //$userId=$answer->user_id;
       //$answer['user']=User::findOrFail($userId);
-      return view('answers/edit',['question'=>$question],['questions'=>$questions]);
+      return view('answers/edit',['question'=>$question,'questions'=>$questions,'answer'=>$answer]);
   }
   public function end($question_id, Request $request){
     
