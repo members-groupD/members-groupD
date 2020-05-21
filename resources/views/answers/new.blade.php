@@ -2,7 +2,7 @@
 @section('content')
 <div class="panel-body">
   <!-- バリデーションエラーの場合に表示 --> 
-  <form action="{{ route('answer.create', ['question_id'=>$question->id],['questions'=>$questions])}}" method="POST" class="form-horizontal">
+  <form action="{{url('/answer/new',$question->id)}}" method="POST" class="form-horizontal">
     {{csrf_field()}} 
       <div class="form-group"> 
         <label for="listing" class="col-sm-3 control-label">質問</label> 
@@ -10,13 +10,13 @@
          {{$question->title}}<br>
          {{$question->content}}<br>
          {{$question->cate_id}}<br>
-         {{$questions['user']->name}}
+         {{$question['user']->name}}
         </div>
       </div>
       <div class="form-group"> 
         <div class="col-sm-offset-3 col-sm-6"> 
          <h1>回答内容</h1>
-          <input type = "text" name ="content"><br/>
+           <textarea name="content" cols="50" rows="5" class="form-control"></textarea>
           <button type="submit" class="btn btn-default">
             <i class="glyphicon glyphicon-saved"></i> 回答
           </button> 

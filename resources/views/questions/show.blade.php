@@ -29,24 +29,16 @@
     <div class="answers">
         <p>みんなの回答</p>
         @for($i=0;$i<count($answers);$i++)
-        @if($question->id===$answers[$i]['answer_id'])
+        @if($question->id===$answers[$i]['question_id'])
         <div class="answerbox">
             <p>{{$answers[$i]->title}}</p>
-            @for($m=0;$m<count($users);$m++)
-            @if($answers[$i]['user_id']===$users[$m]['id'])
-            <p>{{$users[$m]->name}}</p>
-            @endif
-            @endfor
+         
         </div>
         @endif
         @endfor 
     </div>
     <div>
-<<<<<<< HEAD
-        <p class="blueBtn"><a href="/questions/{{$question->id}}/answer/new">回答します</a></p>
-=======
-        <p><a href="/questions/{{$question->id}}/answer">回答します</a></p>
->>>>>>> bcf606cb05b39da721a6a067fed9a40accda6c27
+        <p class="blueBtn"><a href="/questions/{{$question->id}}/answer">回答します</a></p>
     </div>
 </div>
 @endsection
