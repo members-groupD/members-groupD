@@ -27,12 +27,19 @@ ul{
 .laraveltag{
    background-color:#fc4f3d; 
 }
-.csstag{
+.ctag{
     background-color:#1F5FAA;
 }
-.sasstag{
+.javatag{
     background-color:#C15D8E;
 }
+.javaScripttag{
+    background-color:#f0e68c;
+}
+.sonotatag{
+    background-color:#fff0f5;
+}
+
 .blueBtn a{
     background: #4962ea;
     color: #fff;
@@ -154,4 +161,30 @@ footer{
 .btn-posi{
     float:right;
     margin-top:30px;
+    margin-bottom:30px;
+}
+
+.question_header{
+            ul{
+            padding:0;
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+            li:first-child{
+                font-weight:800;
+                color:$blueColor;
+                font-size:22px;
+                font-family: $font2;
+            }
+            li:last-child{
+                width:100px;
+                margin:0;
+                text-align:center;
+                 font-family: $font1;
+            }
+        }
+}
+
+.cate_title{
+    margin-bottom:20px;
 }
