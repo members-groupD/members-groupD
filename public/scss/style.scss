@@ -1,6 +1,10 @@
 
 // indexindex　header footerのcss 共通のＣＳＳ
 @import "vars";
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+
 html {
   height: 100%;
 }
@@ -17,10 +21,10 @@ ul{
     padding:0;
 }
 .tags{
-    with:100px;
+    width:100px;
     border-radius:10px;
     color:#ffffff;
-     font-family: $font1;
+    font-family: $font1;
 }
 .PHPtag{
     background-color:#8993c1;
@@ -59,6 +63,7 @@ ul{
         border:1px solid red;
     }
 }
+
 .navbar-brand span{
     font-size: 30px;
     font-weight:bold;
@@ -166,7 +171,8 @@ footer{
 .btn-posi{
     float:right;
     margin-top:30px;
-    margin-bottom:30px;
+    margin-bottom:100px;
+    margin-right:40px;
 }
 
 
@@ -266,4 +272,15 @@ footer{
 }
 // ユーザー新規登録
 
-
+.svgfile{
+    position:relative;
+    p{
+        line-height:2.5em;
+        position:absolute;
+        color:$blueColor;
+        top:30%;
+        left:5%;
+        font-size:3.5rem;
+        font-family:$font2;
+    }
+}
