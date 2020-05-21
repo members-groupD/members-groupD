@@ -60,10 +60,11 @@ ul{
     }
 }
 .navbar-brand span{
+    
     font-size: 30px;
     font-weight:bold;
     font-family:$font2;
-    margin:0 4px;
+    margin:0 0;
     text-shadow: 4px 2px 3px  rgba(0, 0, 0, 0.3);
   &:first-child{
       color:$blueColor;
