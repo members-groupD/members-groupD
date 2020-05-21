@@ -1,0 +1,22 @@
+* {
+  text-align: center;
+}
+.questions-area {
+  color: #4962ea;
+  font-family: 'Kosugi Maru', sans-serif;
+  border-top: dashed 8px gray;
+}
+.answers-area {
+  color: #ffcf24;
+  font-family: 'Kosugi Maru', sans-serif;
+  border-top: dashed 8px gray;
+}
+.user-info {
+  background-color: whitesmoke;
+}
+.button form {
+  display: inline-block;
+}
+.title p {
+  font-size: 20px;
+}

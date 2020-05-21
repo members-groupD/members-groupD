@@ -17,6 +17,7 @@
     <link href="{{ asset('css/question.css') }}" rel="stylesheet">
     <link href="{{ asset('css/question_create.css') }}" rel="stylesheet">
     <link href="{{ asset('css/question_edit.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/show.css') }}" rel="stylesheet">
 
     
     <!-- bootstrap -->
