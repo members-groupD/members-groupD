@@ -5,14 +5,14 @@
   <form action="{{url('/answer/new',$question->id)}}" method="POST" class="form-horizontal">
     {{csrf_field()}} 
       <div class="form-group"> 
-        <label for="listing" class="col-sm-3">質問<label/> <br>
+        <label for="listing" class="col-sm-3 ans_title">　　</label> <br>
         <!--<h1>---------------------------------------------------------------------------------------------------------<h1>
         -->
         <div class="col-sm-6"> 
-         <li>{{$question->title}}</li><br>
-         {{$question->content}}<br>
+         <li class="answer_title">タイトル：{{$question->title}}</li><br>
+         内容：{{$question->content}}<br>
          <!--{{$question->cate_id}}<br>-->
-         {{$question['user']->name}}
+         質問者：{{$question['user']->name}}
         </div>
       </div>
       <div class="form-group"> 
@@ -20,7 +20,7 @@
          <!--<h1>回答内容</h1>-->
          
            <textarea name="content" cols="50" rows="5" class="form-control"></textarea>
-          <button type="submit" class="button">
+          <button type="submit" class="button ans_btn">
             <!--<i class="glyphicon">回答</i> -->
             回答を送信
           </button> <br>
