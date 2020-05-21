@@ -12,6 +12,7 @@ use Validator;
 
 class QuestionsController extends Controller
 {
+
     //コンストラクタ （このクラスが呼ばれると最初にこの処理をする）
     public function __construct()
 
@@ -20,6 +21,7 @@ class QuestionsController extends Controller
         $this->middleware('auth');
     }
     
+
     // ===ここまでリストを新規作成する処理の追加（フォームへの遷移）===
 
     //===ここから質問の一覧表示をするための処理追加===
@@ -42,8 +44,14 @@ class QuestionsController extends Controller
        $userId=$question->user_id;
        $question['user']=User::findOrFail($userId);
        $answers=Answer::orderBy('created_at', 'asc')->get();
-       $users=User::get();
-        return view('questions/show', ['question' => $question],['answers' => $answers],['users'=>$users]);
+       $alls=User::get();
+       foreach($answers as $answer){
+         
+           //dd($users);
+       }
+       //dd($answers);
+        return view('questions/show', ['question' => $question],['answers' => $answers],['alls' => $alls]);
+
     }
     
     public function new(){

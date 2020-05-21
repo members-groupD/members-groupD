@@ -13,25 +13,37 @@ use App\User;
 
 class AnswersController extends Controller
 {
+  // public function new($question_id){
+
+  //   dd("回答");
+  //     return view('answers/new',['question_id'=>$question_id]);
+  // }
+  
+  public function __construct()
+
+  {
+      // ログインしていなかったらログインページに遷移する（この処理を消すとログインしなくてもページを表示する）
+      $this->middleware('auth');
+  }
   public function new($question_id){
-<<<<<<< HEAD
-    dd("回答");
-      return view('answers/new',['question_id'=>$question_id]);
+    $question = Question::find($question_id);
+    $userId=$question->user_id;
+    $question['user']=User::findOrFail($userId);
+      // return view('answers/new',['question'=>$question],['questions'=>$questions]);
+    return view('answers/new',['question'=>$question]);
   }
-  public function create($question_id){
-    
-      
-=======
-     $question = Question::find($question_id);
-      $questions = Question::findOrFail($question_id);
-      $userId=$questions->user_id;
-      $questions['user']=User::findOrFail($userId);
-      return view('answers/new',['question'=>$question],['questions'=>$questions]);
-  }
-  public function create($question_id, Request $request){
-    
-       return redirect('/');
->>>>>>> bcf606cb05b39da721a6a067fed9a40accda6c27
+  public function create($id,Request $request){
+    $validator = Validator::make($request->all() , ['content' => 'required|max:255', ]);
+    if ($validator->fails())
+    {
+        return redirect()->back()->withErrors($validator->errors())->withInput();
+    }
+    $answers = new Answer;
+    $answers->user_id = Auth::user()->id;
+    $answers->question_id=$id;
+    $answers->content=$request->content;
+    $answers->save();
+    return redirect('/');
   }
   public function edit($question_id){
       //eval(\Psy\Sh());
