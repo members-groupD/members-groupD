@@ -55,7 +55,7 @@ class QuestionsController extends Controller
     }
     
     public function new(){
-        $cates = Cate::all();
+        $cates = Cate::get();
         return view('questions/create',['cates'=>$cates]);
     }
     
@@ -69,7 +69,6 @@ class QuestionsController extends Controller
             return redirect()->back()->withErrors($validator->errors())->withInput();
             // 上記では、入力画面に戻りエラーメッセージと、入力した内容をフォーム表示させる処理を記述しています
         }
-        
         $question = new Question;
         $question->title = $request->question_title;
         $question->content = $request->content;
@@ -83,8 +82,8 @@ class QuestionsController extends Controller
     
     public function edit($question_id){
         $question = Question::find($question_id);
-        $cate = Cate::all();
-        return view('questions/edit', with(['question' => $question, 'cates'=>$cate]));
+        $cates = Cate::all();
+        return view('questions/edit', with(['question' => $question, 'cates'=>$cates]));
     }
     
     public function update(Request $request){

@@ -18,18 +18,15 @@
       <label for="question" class="col-sm-3 control-label">カテゴリ：</label> 
       <div class="col-sm-6"> 
         <select name="cate_id" class="form-control custom-select">
-            <!--@foreach ($cates as $cate)-->
-            <!--    <option value = "{{$cate->id}}">{{$cate->title}}</option>-->
-            <!--@endforeach-->
-            <option value = "1">PHP</option>
-            <option value = "2">HTML</option>
+            @foreach ($cates as $cate)
+                <option value = "{{$cate->id}}">{{$cate->cate}}</option>
+            @endforeach
         </select>
       </div>
       <div class="col-sm-12"></div>
       
       <label for="question" class="col-sm-3 control-label">質問内容：</label> 
       <div class="col-sm-6"> 
-        <!--<input type="text" name="content" class="form-control" value="{{$question->content}}">-->
         <textarea name="content" class="form-control" rows=15>{{$question->content}}</textarea>
       </div>
       

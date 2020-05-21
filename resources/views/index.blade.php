@@ -9,6 +9,7 @@
       <div class="question">
         <div class="question_header">
           <h2 class="question_header_title"><a href="{{ url('/questions/show', $question->id) }}">{{ $question->title }}</a></h2>
+          <!--<h3 class="question_header_title"><a href="{{ url('/question/show', $question->id) }}" class="text-dark">{{ $question->title }}</a></h3>-->
           <p class=category>カテゴリ（番号）{{$question->cate_id}}</p>
         </div>
         <div>
