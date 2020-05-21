@@ -8,6 +8,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+   position: relative;
 }
 li{
     list-style-type:none !important;
@@ -21,23 +22,20 @@ ul{
     color:#ffffff;
      font-family: $font1;
 }
-.phptag{
+.PHPtag{
     background-color:#8993c1;
 }
 .laraveltag{
    background-color:#fc4f3d; 
 }
-.ctag{
+.CSStag{
     background-color:#1F5FAA;
 }
-.javatag{
+.SASStag{
     background-color:#C15D8E;
 }
-.javaScripttag{
-    background-color:#f0e68c;
-}
-.sonotatag{
-    background-color:#fff0f5;
+.JStag{
+    background-color:#E3C431;
 }
 
 .blueBtn a{
@@ -99,8 +97,15 @@ ul{
         }
     }
 }
+.registerBtn a,.loginBtn a{
+    font-family:$font1;
+    margin-right:15px;
+    color:$blueColor !important;
+}
 // footer
 footer{
+    position: absolute;
+    bottom: 0px;
     background:$blueColor;
     color:#fff;
     font-family: $font1;
@@ -164,6 +169,7 @@ footer{
     margin-bottom:30px;
 }
 
+
 .question_header{
             ul{
             padding:0;
@@ -188,3 +194,76 @@ footer{
 .cate_title{
     margin-bottom:20px;
 }
+
+
+// login画面
+.logotit{
+    margin:50px auto 10px;
+    text-align:center;
+    span{
+        font-size: 30px;
+        font-weight:bold;
+        font-family:$font2;
+        margin:0 4px;
+        text-shadow: 4px 2px 3px  rgba(0, 0, 0, 0.3);
+        &:first-child{
+          color:$blueColor;
+        }
+        &:nth-child(2){
+          color:$yellowColor;
+        }
+        &:last-child{
+          color:$blueColor;
+        }
+    }
+}
+.logintitle{
+    width:100%;
+    max-width:230px;
+    margin:0 auto;
+    text-align: center;
+    font-family: 'Kosugi', sans-serif;
+    margin-bottom: 50px;
+    display: flex;
+     &::before,&:after {
+        border-top: 1px solid;
+        content: "";
+        flex-grow: 1;
+    }
+    &:before {
+        margin-right: 1rem;
+    }
+    &:after{
+        margin-left: 1rem;
+    }
+}
+.loginPage{
+  margin:150px 0;
+    .panel{
+        border:none;
+    }
+    .panel-heading{
+        background:none !important;
+    }
+    label{
+        color:$blueColor;
+    }
+    form input{
+        border:1px solid $yellowColor;
+    }
+    input[type=checkbox] {
+      border:1px solid $yellowColor;
+    }
+    .form-group{
+        button{
+            background:$blueColor;
+        }
+        a{
+            color:$yellowColor;
+        }
+    }
+    
+}
+// ユーザー新規登録
+
+

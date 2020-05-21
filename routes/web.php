@@ -49,7 +49,7 @@ Route::get('/questions/show/{id}','QuestionsController@show');
 // Route::post('/answers/{question_id}/edit/new','AnswersController@end')->name('answer.edit');
 
 //質問削除機能
-Route::get('/answersdelete/{answer_id}', 'QuestionsController@destroy');
+Route::get('/answersdelete/{answer_id}', 'AnswersController@destroy');
 
 // -----------------------------answers----------------------------------------------
 //user詳細ページへ

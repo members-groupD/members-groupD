@@ -26,6 +26,6 @@ class UsersController extends Controller
             ->orderBy('created_at', 'asc')
             ->get();
         
-        return view('show', ['user' => $user],['questions' => $questions],['answers' => $answers]);
+        return view('show', ['user' => $user, 'questions' => $questions, 'answers' => $answers]);
     }
 }
