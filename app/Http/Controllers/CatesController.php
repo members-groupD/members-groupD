@@ -11,8 +11,4 @@ use Validator;
 
 class CatesController extends Controller
 {
-    public function new()
-    {
-        return view('cate');
-    }
 }

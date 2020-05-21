@@ -14,9 +14,30 @@
      @foreach ($questions as $question) 
       <div class="question">
         <div class="question_header">
-          <h2 class="question_header_title"><a href="{{ url('/questions/show', $question->id) }}">{{ $question->title }}</a></h2>
-          <!--<h3 class="question_header_title"><a href="{{ url('/question/show', $question->id) }}" class="text-dark">{{ $question->title }}</a></h3>-->
-          <p class=category>カテゴリ（番号）{{$question->cate_id}}</p>
+          <!-- <h2 class="question_header_title"><a href="{{ url('/questions/show', $question->id) }}">{{ $question->title }}</a></h2>
+          <p class=category>カテゴリ（番号）{{$question->cate_id}}</p> -->
+            <ul>
+                <li><a href="{{ url('/questions/show', $question->id) }}">{{ $question->title }}</a></li>
+                @switch($question->cate_id)
+                @case(1)
+                <li class="phptag tags">PHP</li>
+                @break
+                @case(2)
+                <li class="laraveltag tags">laravel</li>
+                @break
+                @case(3)
+                <li class="ctag tags">c言語</li>
+                @break
+                @case(4)
+                <li class="javatag tags">java</li>
+                @break
+                @case(5)
+                <li class="javaScripttag tags">javaScript</li>
+                @break
+                @default
+                <li class="sonotatag tags">その他</li>
+                @endswitch
+            </ul>
         </div>
         <div>
           <p><i class="glyphicon glyphicon-comment huki"></i> {{$question->answers()->count()}}</p>
@@ -26,7 +47,6 @@
      </div>
      <p class=btn-posi>
      <a href="{{ url('questions/new')}}" class="btn btn-info q-btn">質問する</a>
-     <a class="cate_hidden btn btn-info" href="{{ url('cate')}}"></a>
      </p>
   </div>
   
