@@ -17,6 +17,7 @@
     <link href="{{ asset('css/question.css') }}" rel="stylesheet">
     <link href="{{ asset('css/question_create.css') }}" rel="stylesheet">
     <link href="{{ asset('css/question_edit.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/show.css') }}" rel="stylesheet">
 
     
     <!-- bootstrap -->
@@ -30,7 +31,7 @@
 <header class="header">
     <div>
         <a class="navbar-brand" href="{{ url('/') }}">
-            <span>Q</span><span>&</span><span>A</span>
+            <span>Ｑ</span><span>＆</span><span>Ａ</span>
         </a>
     </div>
     <div class="accountbox">

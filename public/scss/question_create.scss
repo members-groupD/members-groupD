@@ -9,8 +9,8 @@
     font-family:$font2;
     font-weight:bold;
     color:white;
-    letter-spacing:2;
     font-size:200%;
+    border-style: none;
 }
 
 a.back-button{
@@ -23,17 +23,27 @@ a.back-button{
     color:white;
     border-radius:10px;
     padding:1% 0;
-    margin:1%;
+    margin:20px 0 20px 0;
 }
 
 .section{
     text-align:center;
-    font-family:$font1;
+    font-family:$font2;
     font-size:200%;
     margin-bottom:20px;
     border-bottom:2px dashed black;
 }
 
-label{
+.q-label{
+    display:inline-block;
     font-family:$font2;
+    font-size:140%;
+    margin-left:20%;
+}
+
+.input-box{
+    display:inline-block;
+    margin-left:20%;
+    margin-bottom:1%;
+    width:60%;
 }

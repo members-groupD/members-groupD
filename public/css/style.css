@@ -14,7 +14,7 @@ ul {
   padding: 0;
 }
 .tags {
-  with: 100px;
+  width: 100px;
   border-radius: 10px;
   color: #fff;
   font-family: 'Kosugi', sans-serif;
@@ -61,7 +61,7 @@ ul {
   font-size: 30px;
   font-weight: bold;
   font-family: 'Kosugi Maru', sans-serif;
-  margin: 0 4px;
+  margin: 0 0;
   text-shadow: 4px 2px 3px rgba(0, 0, 0, 0.3);
 }
 .navbar-brand span:first-child {
@@ -92,11 +92,13 @@ ul {
 .count li:last-child {
   margin-left: 4px;
 }
+
 .registerBtn a, .loginBtn a {
   font-family: 'Kosugi', sans-serif;
   margin-right: 15px;
   color: #4962ea !important;
 }
+
 footer {
   position: absolute;
   bottom: 0px;
@@ -153,6 +155,29 @@ footer p {
 .btn-posi {
   float: right;
   margin-top: 30px;
+  margin-bottom: 100px;
+  margin-right: 40px;
+}
+.question_header ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question_header ul li:first-child {
+  font-weight: 800;
+  color: #4962ea;
+  font-size: 22px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+.question_header ul li:last-child {
+  width: 100px;
+  margin: 0;
+  text-align: center;
+  font-family: 'Kosugi', sans-serif;
+}
+.cate_title {
+  margin-bottom: 20px;
 }
 .logotit {
   margin: 50px auto 10px;
@@ -217,4 +242,16 @@ footer p {
 }
 .loginPage .form-group a {
   color: #ffcf24;
+}
+.svgfile {
+  position: relative;
+}
+.svgfile p {
+  line-height: 2.5em;
+  position: absolute;
+  color: #4962ea;
+  top: 30%;
+  left: 5%;
+  font-size: 3.5rem;
+  font-family: 'Kosugi Maru', sans-serif;
 }

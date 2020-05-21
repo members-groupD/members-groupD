@@ -11,6 +11,7 @@ use Validator;
 
 class CatesController extends Controller
 {
+
     public function new()
     {
         return view('cate');
@@ -24,4 +25,5 @@ class CatesController extends Controller
         return view('/list',['questions' => $questions] ,['cates' => $cates]);
 
     }
+
 }

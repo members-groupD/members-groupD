@@ -1,0 +1,54 @@
+.col-sm-6 li {
+  font-weight: 800;
+  color: #4962ea;
+  font-size: 32px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+.col-sm-3 {
+  text-align: left;
+  font-weight: 800;
+  font-size: 32px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+.button {
+  display       : inline-block;
+  font-size     : 18pt;
+  text-align    : center;
+  /* 文字サイズ */
+  cursor        : pointer;
+  /* 文字位置   */
+  padding       : 11px 32px;
+  /* カーソル   */
+  background    : #4962ea;
+  /* 余白       */
+  color         : #fff;
+  /* 背景色     */
+  line-height   : 1em;
+  /* 文字色     */
+  font-weight: 800;
+  /* 1行の高さ  */
+  font-family: 'Kosugi Maru', sans-serif;
+  border-radius: 10px;
+  margin : 20, 0, 0, 30px;
+  margin-bottom : 20px;
+}
+.return {
+  display     : inline-block;
+  font-size     : 18pt;
+  text-align    : center;
+  /* 文字サイズ */
+  cursor        : pointer;
+  /* 文字位置   */
+  padding       : 11px 32px;
+  /* カーソル   */
+  background    : #ffcf24;
+  /* 余白       */
+  color         : #fff;
+  /* 背景色     */
+  line-height   : 1em;
+  /* 文字色     */
+  font-weight: 800;
+  /* 1行の高さ  */
+  font-family: 'Kosugi Maru', sans-serif;
+  border-radius: 10px;
+}
