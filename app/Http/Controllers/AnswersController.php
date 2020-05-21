@@ -63,7 +63,7 @@ class AnswersController extends Controller
   
   public function destroy($answer_id)
   {
-      Question::destroy($answer_id);
+      Answer::destroy($answer_id);
       return redirect('/');
   }
 }

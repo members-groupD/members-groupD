@@ -109,7 +109,7 @@ class QuestionsController extends Controller
     {
         Question::destroy($question_id);
         return redirect('/');
-    }    
+    }
 
     //-----------------------------------------------
     //カテゴリー追加

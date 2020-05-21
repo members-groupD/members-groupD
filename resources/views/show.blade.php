@@ -11,13 +11,13 @@
 @else
     @foreach($questions as $question)
         <p>投稿タイトル:{{$question->title}}</p>
-        <form action="{{ url("/questions/{$question->id}") }}" method="GET">
+        <form action="{{ url('/questions', $question->id) }}" method="GET">
         {{csrf_field()}}
             <button type="submit" class="btn btn-default">
                 編集
             </button> 
         </form>
-        <form action= "{{ url("/questionsdelete/{$question->id}") }}" method="GET">
+        <form action= "{{ url('/questionsdelete', $question->id) }}" method="GET">
         {{csrf_field()}}
             <button type="submit" class="btn btn-default">
                 削除
@@ -33,13 +33,13 @@
 @else
     @foreach($answers as $answer)
         <p>回答内容:{{$answer->content}}</p>
-        <form action="" method="POST">
+        <form action="{{ url("/answers/{$answer->question_id}/edit") }}" method="GET">
         {{csrf_field()}}
             <button type="submit" class="btn btn-default">
                 編集
             </button> 
         </form>
-        <form action="{{ url("/questionsdelete/{$answer->id}") }}" method="GET">
+        <form action="{{ url('/answersdelete', $answer->id) }}" method="GET">
         {{csrf_field()}}
             <button type="submit" class="btn btn-default">
                 削除
