@@ -11,7 +11,7 @@
 @else
     @foreach($questions as $question)
         <p>投稿タイトル:{{$question->title}}</p>
-        <form action="" method="POST">
+        <form action="{{ url("/questions/{$question->id}") }}" method="GET">
         {{csrf_field()}}
             <button type="submit" class="btn btn-default">
                 編集
