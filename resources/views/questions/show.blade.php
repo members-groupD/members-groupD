@@ -28,16 +28,23 @@
     <!--回答部分-->
     <div class="answers">
         <p>みんなの回答</p>
-        @for($i=0;$i<count($answers);$i++)
-        @if($question->id===$answers[$i]['question_id'])
-        <div class="answerbox">
-            <p>{{$answers[$i]->title}}</p>
-         
+        <div class="answerlist">
+            @foreach($answers as $answer)
+            @if($answer['user']->id!==$question['my'])
+            <ul class="left">
+                <li>{{$answer['user']->name}}</li>
+                <li>{{$answer->content}}</li>
+            </ul>
+            @else
+            <ul class="right">
+                <li>私</li>
+                <li>{{$answer->content}}</li>
+            </ul>
+            @endif
+            @endforeach
         </div>
-        @endif
-        @endfor 
     </div>
-    <div>
+    <div class="btnBar">
         <p class="blueBtn"><a href="/questions/{{$question->id}}/answer">回答します</a></p>
     </div>
 </div>
