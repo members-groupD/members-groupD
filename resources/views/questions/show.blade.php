@@ -6,16 +6,7 @@
         <div class="question">
             <ul>
                 <li>{{ $question->title }}</li>
-                @switch($question->cate_id)
-                @case(1)
-                <li class="phptag tags">PHP</li>
-                @break
-                @case(2)
-                <li class="laraveltag tags">laravel</li>
-                @break
-                @default
-               <li class="csstag tags">css</li>
-                @endswitch
+                <li class="{{$question['category']->cate}}tag tags">{{$question['category']->cate}}</li>
             </ul>
             <p>{{ $question->content }}</p>
         </div>

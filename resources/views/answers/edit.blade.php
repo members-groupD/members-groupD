@@ -16,8 +16,10 @@
       <div class="form-group"> 
         <div class="col-sm-offset-3 col-sm-6"> 
          <h1>回答内容</h1>
+
          <textarea name= "content" class="form-control">{{$answer->content}}</textarea>
-        <!--<input type = “text” name =content><br/>-->
+        
+
          </form>
           <button type="submit" class="btn btn-default">
             <i class="glyphicon glyphicon-saved"></i> 編集した内容を投稿する。

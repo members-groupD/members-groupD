@@ -32,12 +32,6 @@ Route::post('/questions/edit','QuestionsController@update');
 //質問一覧画面
 Route::get('/','QuestionsController@index');
 
-//カテゴリ追加画面
-Route::get('/cate','CatesController@new');
-Route::post('/cate/create', 'QuestionsController@cate_create');
-
-
-
 //質問削除機能
 Route::get('/questionsdelete/{question_id}', 'QuestionsController@destroy');
 
@@ -45,7 +39,9 @@ Route::get('/questionsdelete/{question_id}', 'QuestionsController@destroy');
 Route::get('/questions/{question_id}/answer','AnswersController@new');
 // Route::post('/questions/{question_id}/answer/new','AnswersController@create')->name('answer.create');
 Route::post('/answer/new/{id}','AnswersController@create')->name('answer.create');
+
 Route::get('/answers/{question_id}/edit/{answer_id}','AnswersController@edit')->name('answer.edit');
+
 
 Route::get('/questions/show/{id}','QuestionsController@show');
 // -----------------------------answers----------------------------------------------
@@ -55,7 +51,7 @@ Route::get('/questions/show/{id}','QuestionsController@show');
 // Route::post('/answers/{question_id}/edit/new','AnswersController@end')->name('answer.edit');
 
 //質問削除機能
-Route::get('/answersdelete/{answer_id}', 'QuestionsController@destroy');
+Route::get('/answersdelete/{answer_id}', 'AnswersController@destroy');
 
 // -----------------------------answers----------------------------------------------
 //user詳細ページへ

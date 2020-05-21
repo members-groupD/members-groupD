@@ -23,5 +23,6 @@
       </div>
     </div>
   </form>
+  <a class="btn btn-danger" href="/catesdelete">削除する</a>
 </div> 
 @endsection

@@ -17,6 +17,7 @@
     <link href="{{ asset('css/question.css') }}" rel="stylesheet">
     <link href="{{ asset('css/question_create.css') }}" rel="stylesheet">
     <link href="{{ asset('css/question_edit.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/show.css') }}" rel="stylesheet">
 
     
     <!-- bootstrap -->
@@ -30,15 +31,15 @@
 <header class="header">
     <div>
         <a class="navbar-brand" href="{{ url('/') }}">
-            <span>Q</span><span>&</span><span>A</span>
+            <span>Ｑ</span><span>＆</span><span>Ａ</span>
         </a>
     </div>
     <div class="accountbox">
         <ul class="headerbox">
         <!-- Authentication Links -->
         @guest
-            <li><a href="{{ route('login') }}">Login</a></li>
-            <li><a href="{{ route('register') }}">Register</a></li>
+            <li class="loginBtn"><a href="{{ route('login') }}">Login</a></li>
+            <li class="registerBtn"><a href="{{ route('register') }}">Register</a></li>
         @else
             <li class="dropdown">
                     <ul class="count">
@@ -48,7 +49,6 @@
                                      document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt"></i>
                         </a>
-            
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form></li>
