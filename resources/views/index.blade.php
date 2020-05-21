@@ -49,10 +49,6 @@
      @endforeach
      </div>
 
-     <p class=btn-posi>
-     <a href="{{ url('questions/new')}}" class="btn btn-info q-btn">質問する</a>
-     </p>
-
   </div>
   
   <div class="col-sm-2"></div>
