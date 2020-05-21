@@ -43,6 +43,8 @@ class QuestionsController extends Controller
        $question = Question::findOrFail($id);
        $userId=$question->user_id;
        $question['user']=User::findOrFail($userId);
+       $cateId=$question->cate_id;
+       $question['category']=Cate::findOrFail($cateId);
        $question['my']= Auth::user()->id;
        $answers=Answer::where('question_id', $id)->orderBy('created_at', 'asc')->get();
        $alls=User::get();
@@ -111,22 +113,5 @@ class QuestionsController extends Controller
         return redirect('/');
     }
 
-    //-----------------------------------------------
-    //カテゴリー追加
-    public function cate_create(Request $request)
-    {
-        $validator = Validator::make($request->all() , ['cate' => 'required|max:255', ]);
 
-        if ($validator->fails())
-        {
-            return redirect()->back()->withErrors($validator->errors())->withInput();
-        }
-
-        $cates = new Cate;
-        $cates->cate = $request->cate;
-        $cates->save();
-        
-        // 「/」 ルートにリダイレクト
-        return redirect('/');
-    }
 }

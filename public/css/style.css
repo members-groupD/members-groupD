@@ -5,6 +5,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 li {
   list-style-type: none !important;
@@ -13,22 +14,25 @@ ul {
   padding: 0;
 }
 .tags {
-  with: 100px;
+  width: 100px;
   border-radius: 10px;
   color: #fff;
   font-family: 'Kosugi', sans-serif;
 }
-.phptag {
+.PHPtag {
   background-color: #8993c1;
 }
 .laraveltag {
   background-color: #fc4f3d;
 }
-.csstag {
+.CSStag {
   background-color: #1f5faa;
 }
-.sasstag {
+.SASStag {
   background-color: #c15d8e;
+}
+.JStag {
+  background-color: #e3c431;
 }
 .blueBtn a {
   background: #4962ea;
@@ -85,7 +89,14 @@ ul {
 .count li:last-child {
   margin-left: 4px;
 }
+.registerBtn a, .loginBtn a {
+  font-family: 'Kosugi', sans-serif;
+  margin-right: 15px;
+  color: #4962ea !important;
+}
 footer {
+  position: absolute;
+  bottom: 0px;
   background: #4962ea;
   color: #fff;
   font-family: 'Kosugi', sans-serif;
@@ -139,4 +150,103 @@ footer p {
 .btn-posi {
   float: right;
   margin-top: 30px;
+  margin-bottom: 100px;
+  margin-right: 40px;
+}
+.question_header ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question_header ul li:first-child {
+  font-weight: 800;
+  color: #4962ea;
+  font-size: 22px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+.question_header ul li:last-child {
+  width: 100px;
+  margin: 0;
+  text-align: center;
+  font-family: 'Kosugi', sans-serif;
+}
+.cate_title {
+  margin-bottom: 20px;
+}
+.logotit {
+  margin: 50px auto 10px;
+  text-align: center;
+}
+.logotit span {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Kosugi Maru', sans-serif;
+  margin: 0 4px;
+  text-shadow: 4px 2px 3px rgba(0, 0, 0, 0.3);
+}
+.logotit span:first-child {
+  color: #4962ea;
+}
+.logotit span:nth-child(2) {
+  color: #ffcf24;
+}
+.logotit span:last-child {
+  color: #4962ea;
+}
+.logintitle {
+  width: 100%;
+  max-width: 230px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Kosugi', sans-serif;
+  margin-bottom: 50px;
+  display: flex;
+}
+.logintitle::before, .logintitle:after {
+  border-top: 1px solid;
+  content: "";
+  flex-grow: 1;
+}
+.logintitle:before {
+  margin-right: 1rem;
+}
+.logintitle:after {
+  margin-left: 1rem;
+}
+.loginPage {
+  margin: 150px 0;
+}
+.loginPage .panel {
+  border: none;
+}
+.loginPage .panel-heading {
+  background: none !important;
+}
+.loginPage label {
+  color: #4962ea;
+}
+.loginPage form input {
+  border: 1px solid #ffcf24;
+}
+.loginPage input[type=checkbox] {
+  border: 1px solid #ffcf24;
+}
+.loginPage .form-group button {
+  background: #4962ea;
+}
+.loginPage .form-group a {
+  color: #ffcf24;
+}
+.svgfile {
+  position: relative;
+}
+.svgfile p {
+  line-height: 2.5em;
+  position: absolute;
+  color: #4962ea;
+  top: 30%;
+  left: 5%;
+  font-size: 3.5rem;
+  font-family: 'Kosugi Maru', sans-serif;
 }

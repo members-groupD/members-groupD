@@ -38,8 +38,8 @@
         <ul class="headerbox">
         <!-- Authentication Links -->
         @guest
-            <li><a href="{{ route('login') }}">Login</a></li>
-            <li><a href="{{ route('register') }}">Register</a></li>
+            <li class="loginBtn"><a href="{{ route('login') }}">Login</a></li>
+            <li class="registerBtn"><a href="{{ route('register') }}">Register</a></li>
         @else
             <li class="dropdown">
                     <ul class="count">
@@ -49,7 +49,6 @@
                                      document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt"></i>
                         </a>
-            
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form></li>
