@@ -26,20 +26,25 @@ ul{
     color:#ffffff;
     font-family: $font1;
 }
-.PHPtag{
+.tag1{
     background-color:#8993c1;
 }
-.laraveltag{
+.tag2{
    background-color:#fc4f3d; 
 }
-.CSStag{
-    background-color:#1F5FAA;
+.tag3{
+   background-color:#36028A; 
 }
-.SASStag{
-    background-color:#C15D8E;
+
+.tag4{
+   background-color:#DF1735; 
 }
-.JStag{
-    background-color:#E3C431;
+
+.tag5{
+   background-color:#F8D23C; 
+}
+.tag6{
+   background-color:$blueColor; 
 }
 
 .blueBtn a{

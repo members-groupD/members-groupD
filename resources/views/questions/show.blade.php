@@ -6,7 +6,7 @@
         <div class="question">
             <ul>
                 <li>{{ $question->title }}</li>
-                <li class="{{$question['category']->cate}}tag tags">{{$question['category']->cate}}</li>
+                <li class="tag{{$question['category']->id}} tags">{{$question['category']->cate}}</li>
             </ul>
             <p>{{ $question->content }}</p>
         </div>

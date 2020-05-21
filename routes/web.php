@@ -32,6 +32,7 @@ Route::post('/questions/edit','QuestionsController@update');
 //質問一覧画面
 Route::get('/','QuestionsController@index');
 
+
 //質問削除機能
 Route::get('/questionsdelete/{question_id}', 'QuestionsController@destroy');
 

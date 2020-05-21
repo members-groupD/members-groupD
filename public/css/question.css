@@ -92,3 +92,50 @@
   text-decoration: none;
   opacity: 0.9;
 }
+.catesingle {
+  display: flex;
+  justify-content: space-between;
+}
+.catesingle li:last-child {
+  color: #fff;
+  width: 100px;
+  text-align: center;
+}
+.cateList {
+  display: flex;
+  justify-content: flex-start;
+  flex-warp: warp;
+}
+.cateList li {
+  margin: 5px;
+  width: 100px;
+  text-align: center;
+}
+.cateList li a {
+  text-align: center;
+  color: #fff;
+  width: 100px;
+}
+.quBtn {
+  position: fixed;
+  bottom: 50px;
+  z-index: 99;
+  margin: 0 auto;
+  text-align: center;
+  color: #4962ea;
+  font-family: 'Kosugi', sans-serif;
+  right: 30px;
+}
+.quBtn p:first-child {
+  font-size: 80px;
+  text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.quBtn p:last-child {
+  margin-top: -20px;
+  font-weight: 800;
+  color: #4962ea !important;
+  text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.question-border {
+  margin-bottom: 50px;
+}
