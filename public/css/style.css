@@ -58,7 +58,7 @@ ul {
   font-size: 30px;
   font-weight: bold;
   font-family: 'Kosugi Maru', sans-serif;
-  margin: 0 4px;
+  margin: 0 0;
   text-shadow: 4px 2px 3px rgba(0, 0, 0, 0.3);
 }
 .navbar-brand span:first-child {
@@ -150,8 +150,10 @@ footer p {
 .btn-posi {
   float: right;
   margin-top: 30px;
+
   margin-bottom: 100px;
   margin-right: 40px;
+
 }
 .question_header ul {
   padding: 0;

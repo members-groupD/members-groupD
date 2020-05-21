@@ -65,10 +65,11 @@ ul{
 }
 
 .navbar-brand span{
+    
     font-size: 30px;
     font-weight:bold;
     font-family:$font2;
-    margin:0 4px;
+    margin:0 0;
     text-shadow: 4px 2px 3px  rgba(0, 0, 0, 0.3);
   &:first-child{
       color:$blueColor;
@@ -171,8 +172,10 @@ footer{
 .btn-posi{
     float:right;
     margin-top:30px;
+
     margin-bottom:100px;
     margin-right:40px;
+
 }
 
 
@@ -272,6 +275,7 @@ footer{
 }
 // ユーザー新規登録
 
+
 .svgfile{
     position:relative;
     p{
@@ -284,3 +288,4 @@ footer{
         font-family:$font2;
     }
 }
+

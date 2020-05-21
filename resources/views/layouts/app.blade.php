@@ -31,7 +31,7 @@
 <header class="header">
     <div>
         <a class="navbar-brand" href="{{ url('/') }}">
-            <span>Q</span><span>&</span><span>A</span>
+            <span>Ｑ</span><span>＆</span><span>Ａ</span>
         </a>
     </div>
     <div class="accountbox">
