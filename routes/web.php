@@ -32,12 +32,6 @@ Route::post('/questions/edit','QuestionsController@update');
 //質問一覧画面
 Route::get('/','QuestionsController@index');
 
-//カテゴリ追加画面
-Route::get('/cate','CatesController@new');
-Route::post('/cate/create', 'QuestionsController@cate_create');
-
-
-
 //質問削除機能
 Route::get('/questionsdelete/{question_id}', 'QuestionsController@destroy');
 
