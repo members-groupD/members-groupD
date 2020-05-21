@@ -1,5 +1,5 @@
 .bodybox {
-  margin: 50px auto;
+  margin: 150px auto;
   width: 80%;
   max-width: 1200px;
   text-align: center;
@@ -50,8 +50,10 @@
   margin: 10px auto;
 }
 .answers {
-  margin: 36px auto;
+  width: 70%;
+  margin: 36px 0;
   text-align: left;
+  padding_bottom: 36px;
   font-family: 'Kosugi Maru', sans-serif;
 }
 .answers > p {
@@ -59,4 +61,34 @@
   color: #ffcf24;
   font-size: 32px;
   font-family: 'Kosugi Maru', sans-serif;
+}
+.answerlist {
+  margin-top: 20px;
+}
+.answerlist > ul li:first-child {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.answerlist > ul li:last-child {
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #4962ea;
+}
+.right {
+  text-align: right;
+}
+.btnBar {
+  padding-top: 56px !important;
+}
+.blueBtn {
+  width: 70%;
+}
+.blueBtn a {
+  transition: ease 0.5s;
+}
+.blueBtn a:hover {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
 }

@@ -1,6 +1,14 @@
 
 // indexindex　header footerのcss 共通のＣＳＳ
 @import "vars";
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 li{
     list-style-type:none !important;
 }
@@ -85,9 +93,18 @@ ul{
     }
 }
 // footer
-
+footer{
+    background:$blueColor;
+    color:#fff;
+    font-family: $font1;
+    width:100%;
+    p{
+        margin:0;
+        text-align:center;
+        padding:10px 0;
+    }
+}
 // indexindex　header footerのcss
-@import "vars";
 .category{
 	float:right;
 }
