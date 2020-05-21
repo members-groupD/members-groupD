@@ -34,9 +34,9 @@ Route::get('/','QuestionsController@index');
 
 //カテゴリ追加画面
 Route::get('/cate','CatesController@new');
-Route::post('/cate/create', 'QuestionsController@cate_create');
-
-
+//Route::post('/cate/create', 'CatesController@show');
+// カテゴリー一覧ページ
+Route::get('/list/{id}', 'CatesController@show');
 
 //質問削除機能
 Route::get('/questionsdelete/{question_id}', 'QuestionsController@destroy');

@@ -19,20 +19,23 @@ ul {
   color: #fff;
   font-family: 'Kosugi', sans-serif;
 }
-.PHPtag {
+.tag1 {
   background-color: #8993c1;
 }
-.laraveltag {
+.tag2 {
   background-color: #fc4f3d;
 }
-.CSStag {
-  background-color: #1f5faa;
+.tag3 {
+  background-color: #36028a;
 }
-.SASStag {
-  background-color: #c15d8e;
+.tag4 {
+  background-color: #df1735;
 }
-.JStag {
-  background-color: #e3c431;
+.tag5 {
+  background-color: #f8d23c;
+}
+.tag6 {
+  background-color: #4962ea;
 }
 .blueBtn a {
   background: #4962ea;

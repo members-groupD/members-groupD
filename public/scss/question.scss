@@ -96,3 +96,56 @@
   }   
   }
 }
+
+
+
+// カテゴリー一覧の部分
+.catesingle{
+    display:flex;
+    justify-content:space-between;
+    li:last-child{
+        color:#ffffff;
+        width:100px;
+        text-align:center;
+    }
+}
+.cateList{
+        display:flex;
+        justify-content:flex-start;
+        flex-warp:warp;
+    li{
+        margin:5px;
+        width:100px;
+        text-align:center;
+        a{
+            text-align:center;
+            color:#ffffff;
+            width:100px;
+        }
+    }
+}
+
+.quBtn{
+  position:fixed;
+  bottom:50px;
+  z-index:99;
+  margin: 0 auto;
+  text-align:center;
+  color:$blueColor;
+  font-family:$font1;
+  right:30px;
+  p:first-child{
+  font-size:80px;
+  text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.2);
+  
+    }
+p:last-child{
+  margin-top:-20px;
+  font-weight:800;
+  color:$blueColor !important;
+  text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+}
+.question-border{
+  margin-bottom:50px;
+}

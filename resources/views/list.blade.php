@@ -9,7 +9,7 @@
 <div class="topPage">
 
   <div class="questionWrapper col-sm-6 ">
-    <h2 class="question_title">質問一覧</h2>
+    <h2 class="question_title">{{$questions[0]->cate->cate}}質問一覧</h2>
      <div class="question-border">
      @foreach ($questions as $question) 
       <div class="question">
@@ -17,10 +17,10 @@
           <h2 class="question_header_title"><a href="{{ url('/questions/show', $question->id) }}">{{ $question->title }}</a></h2>
           <!--<h3 class="question_header_title"><a href="{{ url('/question/show', $question->id) }}" class="text-dark">{{ $question->title }}</a></h3>-->
         </div>
-       <div>
+        <div>
             <ul class="catesingle">
                 <li><i class="glyphicon glyphicon-comment huki"></i> {{$question->answers()->count()}}</li>
-                <li class="tag{{$question->cate_id}} tags">{{$question->cate->cate}}</li>
+                <li class="tag{{$question->cate->id}} tags">{{$question->cate->cate}}</li>
             </ul>
         </div>
       </div>
@@ -30,17 +30,22 @@
        <p><i class="fas fa-plus-circle"></i></p>
        <p><a href="{{ url('questions/new')}}">質問する</a></p>
      </div>
+     <p class=btn-posi>
+     <a class="cate_hidden btn btn-info" href="{{ url('cate')}}"></a>
+     </p>
   </div>
   
   <div class="col-sm-2"></div>
   
   <div class="categoryWrapper col-sm-4">
     <h2 class="category_title">カテゴリー</h2>
-     <ul class="cateList">
+     
+    <ul class="cateList">
       @foreach ($cates as $cate)
       <li class="tag{{$cate->id}} tags"><a href="{{url('/list',$cate->id)}}">{{ $cate->cate}}</a></li>
       @endforeach
     </ul>
+
   </div>
   
 </div>
