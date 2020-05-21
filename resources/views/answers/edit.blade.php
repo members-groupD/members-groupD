@@ -5,12 +5,14 @@
   <form action="{{ route('answer.edit', ['question_id'=>$question->id,'questions'=>$questions,'answer'=>$answer])}}" method="POST" class="form-horizontal">
     {{csrf_field()}} 
       <div class="form-group"> 
-        <label for="listing" class="col-sm-3 control-label">質問</label> 
+        <label for="listing" class="col-sm-3 control-label">　　</label> 
         <div class="col-sm-6"> 
-         {{$question->title}}<br>
-         {{$question->content}}<br>
-         {{$question->cate_id}}<br>
-         {{$questions['user']->name}}
+         <li class="answer_title">
+         タイトル：{{$question->title}}<br>
+         </li>
+         <br>
+         内容：{{$question->content}}<br>
+         質問者：{{$questions['user']->name}}
         </div>
       </div>
       <div class="form-group"> 
@@ -21,10 +23,10 @@
         
 
          </form>
-          <button type="submit" class="btn btn-default">
+          <button type="submit" class="button">
             <i class="glyphicon glyphicon-saved"></i> 編集した内容を投稿する。
           </button> 
-          <button type="button" onclick="history.back()">戻る</button>
+          <button type="button" onclick="history.back()" class="return">戻る</button>
         </div>
       </div>
     </form>

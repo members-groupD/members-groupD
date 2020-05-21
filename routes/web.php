@@ -43,7 +43,6 @@ Route::post('/answer/new/{id}','AnswersController@create')->name('answer.create'
 
 Route::get('/answers/{question_id}/edit/{answer_id}','AnswersController@edit')->name('answer.edit');
 
-
 Route::get('/questions/show/{id}','QuestionsController@show');
 // -----------------------------answers----------------------------------------------
 // Route::post('/questions/{question_id}/answer/new','AnswersController@create')->name('answer.create');
@@ -57,3 +56,5 @@ Route::get('/answersdelete/{answer_id}', 'AnswersController@destroy');
 // -----------------------------answers----------------------------------------------
 //user詳細ページへ
 Route::get('/show','UsersController@show');
+
+Route::get('/list/{id}','CatesController@show');

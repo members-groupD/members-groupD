@@ -14,7 +14,7 @@
         <div class="title">
             <p>投稿タイトル:{{$question->title}}</p>
         </div>
-        <div class="button">
+        <div>
         <form action="{{ url('/questions', $question->id) }}" method="GET">
         {{csrf_field()}}
             <button type="submit" class="btn btn-default">
@@ -43,7 +43,7 @@
         <div class="title">
             <p>回答内容:{{$answer->content}}</p>
         </div>
-        <div class="button">
+        <div>
         <form action="{{ url("/answers/{$answer->question_id}/edit/{$answer->id}") }}" method="GET">
 
         {{csrf_field()}}

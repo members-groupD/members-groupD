@@ -19,7 +19,6 @@
         <div class="question_header">
 
           <h2 class="question_header_title"><a href="{{ url('/questions/show', $question->id) }}">{{ $question->title }}</a></h2>
-          <!--<h3 class="question_header_title"><a href="{{ url('/question/show', $question->id) }}" class="text-dark">{{ $question->title }}</a></h3>-->
 
         </div>
        <div>
@@ -33,7 +32,7 @@
      </div>
 
      <div class="quBtn">
-       <p><i class="fas fa-plus-circle"></i></p>
+       <p><a href="{{ url('questions/new')}}"><i class="fas fa-plus-circle"></i></a></p>
        <p><a href="{{ url('questions/new')}}">質問する</a></p>
      </div>
 
@@ -49,8 +48,6 @@
       @endforeach
     </ul>
   </div>
-       <p class=btn-posi>
-     <a href="{{ url('questions/new')}}" class="btn btn-info q-btn">質問する</a>
-     </p>
+
 </div>
 @endsection
