@@ -45,7 +45,7 @@ Route::get('/questionsdelete/{question_id}', 'QuestionsController@destroy');
 Route::get('/questions/{question_id}/answer','AnswersController@new');
 // Route::post('/questions/{question_id}/answer/new','AnswersController@create')->name('answer.create');
 Route::post('/answer/new/{id}','AnswersController@create')->name('answer.create');
-Route::get('/answers/{question_id}/edit','AnswersController@edit')->name('answer.edit');
+Route::get('/answers/{question_id}/edit/{request_id}','AnswersController@edit')->name('answer.edit');
 
 Route::get('/questions/show/{id}','QuestionsController@show');
 // -----------------------------answers----------------------------------------------
