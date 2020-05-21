@@ -3,8 +3,10 @@
 
 
 <div class="topPage">
+
   <div class="questionWrapper col-sm-6 ">
-    <h2 class="question_title text-primary">質問一覧</h2>
+    <h2 class="question_title">質問一覧</h2>
+     <div class="question-border">
      @foreach ($questions as $question) 
       <div class="question">
         <div class="question_header">
@@ -12,18 +14,21 @@
           <p class=category>カテゴリ（番号）{{$question->cate_id}}</p>
         </div>
         <div>
-          <p>回答数{{$question->answers()->count()}}</p>
+          <p><i class="glyphicon glyphicon-comment huki"></i> {{$question->answers()->count()}}</p>
         </div>
       </div>
      @endforeach
-     <a href="{{ url('questions/new')}}" class="btn btn-info">質問する</a>
+     </div>
+     <p class=btn-posi>
+     <a href="{{ url('questions/new')}}" class="btn btn-info q-btn">質問する</a>
      <a class="cate_hidden btn btn-info" href="{{ url('cate')}}"></a>
+     </p>
   </div>
   
   <div class="col-sm-2"></div>
   
   <div class="categoryWrapper col-sm-4">
-    <h2 class="category_title text-primary">カテゴリー</h2>
+    <h2 class="category_title">カテゴリー</h2>
     @foreach ($cates as $cate) 
       <div class="cate">
         <div class="cate_title">
