@@ -33,7 +33,7 @@
 @else
     @foreach($answers as $answer)
         <p>回答内容:{{$answer->content}}</p>
-        <form action="" method="POST">
+        <form action="{{ url("/answers/{$answer->question_id}/edit/{$answer->id}") }}" method="GET">
         {{csrf_field()}}
             <button type="submit" class="btn btn-default">
                 編集
