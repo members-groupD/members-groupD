@@ -24,7 +24,7 @@
 
 
          </form>
-          <p class="answer_button"><button type="submit" class="button q-button">編集した内容を投稿する。
+          <p class="answer_button"><button type="submit" class="button q-button">投稿する
           </button></p>
              
           <p class="answer_button"><button type="button" onclick="history.back()" class="return back-button">戻る</button></p>
