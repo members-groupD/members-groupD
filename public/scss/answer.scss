@@ -41,3 +41,38 @@
   font-family: $font2; 
   border-radius:10px;
 }
+
+// 追加
+#answer_edit{
+    margin:70px 0;
+    font-family:$font2 !important;
+    .answer_button{
+        margin: 20px 0;
+        border: none;
+        width:100%;
+        text-align:center;
+         button{
+            width:60%;
+            border:none;
+            padding:10px ;
+            margin:0 !important;
+        }
+    }
+}
+
+#question-answer-btn{
+    button{
+        border: none;
+        width:200px;
+        margin: 10px auto;
+        text-align:center;
+    }
+    p{
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+    }
+}
+a:hover{
+    text-decoration:none !important;
+}
