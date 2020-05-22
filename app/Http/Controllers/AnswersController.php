@@ -58,7 +58,6 @@ class AnswersController extends Controller
         return view('questions/show', ['question' => $question],['answers' => $answers]);
   }
   public function edit($question_id,$answer_id){
-
       $question = Question::find($question_id);
       $questions = Question::findOrFail($question_id);
       $userId=$questions->user_id;
