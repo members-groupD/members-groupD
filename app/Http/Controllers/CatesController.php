@@ -22,7 +22,8 @@ class CatesController extends Controller
             $question['cate']=Cate::findOrFail($id);
         }
          $cates = Cate::orderBy('created_at', 'asc')->get();
-        return view('/list',['questions' => $questions] ,['cates' => $cates]);
+         $chose=Cate::findOrFail($id);
+        return view('/list',compact('questions','chose','cates'));
 
     }
 

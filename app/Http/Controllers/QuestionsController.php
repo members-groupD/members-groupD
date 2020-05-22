@@ -115,6 +115,7 @@ class QuestionsController extends Controller
     public function destroy($question_id)
     {
         Question::destroy($question_id);
+        Answer::where('question_id',$question_id)->delete();
         return redirect('/');
     }
 
