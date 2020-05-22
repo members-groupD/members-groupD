@@ -89,7 +89,8 @@ class QuestionsController extends Controller
     public function edit($question_id){
         $question = Question::find($question_id);
         $cates = Cate::all();
-        return view('questions/edit', with(['question' => $question, 'cates'=>$cates]));
+        $cate = Cate::find($question->cate_id);
+        return view('questions/edit', with(['question' => $question, 'cates'=>$cates, 'cateone'=>$cate]));
     }
     
     public function update(Request $request){

@@ -2,7 +2,7 @@
 @section('content')
 <div class="panel-body" id="answer_edit">
   <!-- バリデーションエラーの場合に表示 --> 
-  <form action="{{ route('answer.edit', ['question_id'=>$question->id,'questions'=>$questions,'answer'=>$answer])}}" method="POST" class="form-horizontal">
+  <form action="{{ url('/answers/update')}}" method="POST" class="form-horizontal">
     {{csrf_field()}} 
       <div class="form-group"> 
         <label for="listing" class="col-sm-3 control-label"></label> 
@@ -20,13 +20,15 @@
          <h1>回答内容</h1>
 
          <textarea name= "content" class="form-control">{{$answer->content}}</textarea>
-        
+        <input type="hidden" name="answer_id" value="{{ old('answer_id', $answer->id) }}">
+
 
          </form>
           <p class="answer_button"><button type="submit" class="button q-button">編集した内容を投稿する。
           </button></p>
              
           <p class="answer_button"><button type="button" onclick="history.back()" class="return back-button">戻る</button></p>
+
         </div>
       </div>
     </form>

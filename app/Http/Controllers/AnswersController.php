@@ -56,6 +56,25 @@ class AnswersController extends Controller
       //$answer['user']=User::findOrFail($userId);
       return view('answers/edit',['question'=>$question,'questions'=>$questions,'answer'=>$answer]);
   }
+  
+  public function update(Request $request)
+  {
+    
+      $validator = Validator::make($request->all() , ['content' => 'required|max:255', ]);
+
+      if ($validator->fails())
+      {
+         return redirect()->back()->withErrors($validator->errors())->withInput();
+      }
+      
+      
+      $answer = Answer::find($request->answer_id);
+      $answer->content = $request->content;
+      $answer->save();
+        
+      return redirect('/');
+  }
+  
   public function end($question_id, Request $request){
     
        return redirect('/');
@@ -64,6 +83,6 @@ class AnswersController extends Controller
   public function destroy($answer_id)
   {
       Answer::destroy($answer_id);
-      return redirect('/');
+      return redirect('/show');
   }
 }

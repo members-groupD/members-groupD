@@ -43,6 +43,8 @@ Route::post('/answer/new/{id}','AnswersController@create')->name('answer.create'
 
 Route::get('/answers/{question_id}/edit/{answer_id}','AnswersController@edit')->name('answer.edit');
 
+Route::post('/answers/update','AnswersController@update');
+
 Route::get('/questions/show/{id}','QuestionsController@show');
 // -----------------------------answers----------------------------------------------
 // Route::post('/questions/{question_id}/answer/new','AnswersController@create')->name('answer.create');
