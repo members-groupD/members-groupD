@@ -5,10 +5,10 @@
     <div class="questionbox">
         <div class="question">
             <ul>
-                <li>{{ $question->title }}</li>
+                <li>タイトル：{{ $question->title }}</li>
                 <li class="tag{{$question['category']->id}} tags">{{$question['category']->cate}}</li>
             </ul>
-            <p>{{ $question->content }}</p>
+            <p>内容：{{ $question->content }}</p>
         </div>
         <div class="questioner">
             <p>質問者</p>
@@ -28,7 +28,7 @@
             </ul>
             @else
             <ul class="right">
-                <li>私</li>
+                <li></li>
                 <li>{{$answer->content}}</li>
             </ul>
             @endif
@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="btnBar">
-        <p class="blueBtn"><a href="/questions/{{$question->id}}/answer">回答します</a></p>
+        <p class="blueBtn"><a href="/questions/{{$question->id}}/answer">回答する</a></p>
     </div>
 </div>
 @endsection
