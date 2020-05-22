@@ -19,11 +19,11 @@
       <div class="col-sm-12"> </div>
       <div class="input-box">
         <select name="cate_id" class="form-control custom-select">
-          <option selected = "{{$cateone->id}}">{{$cateone->cate}}</option>
             @foreach ($cates as $cate)
-              @if($cateone->id != $cate->id)
-                <option value = "{{$cate->id}}">{{$cate->cate}}</option>
-              @endif
+                <option 
+                <?php
+                if($cateone->id == $cate->id) {echo("selected");}
+                ?> value = "{{$cate->id}}">{{$cate->cate}}</option>
             @endforeach
         </select>
       </div>
