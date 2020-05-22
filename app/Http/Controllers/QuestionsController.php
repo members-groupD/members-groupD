@@ -29,7 +29,7 @@ class QuestionsController extends Controller
     {
         // Questionモデルを介してデータベースからデータを取得。whereで取得したデータは配列になっている。
         $questions = Question::orderBy('created_at', 'asc')->get();// 全てのデータが取得できる
-        $cates = Cate::orderBy('created_at', 'asc')->get();
+        $cates = Cate::orderBy('created_at', 'des')->get();
           foreach($questions as $question){
              $id=$question->cate_id;
             $question['cate']=Cate::findOrFail($id);
