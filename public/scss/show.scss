@@ -5,13 +5,14 @@
 .questions-area {
     color: $blueColor;
     font-family: $font2;
-    border-top: dashed 8px gray;
+    border-top: dashed 2px gray;
 }
 
 .answers-area {
     color: $yellowColor;
     font-family: $font2;
-    border-top: dashed 8px gray;
+    margin-top:50px;
+    border-top: dashed 2px gray;
 }
 
 .user-info {
@@ -24,4 +25,37 @@
 
 .title > p{
     font-size: 20px;
+}
+
+
+// 追加の部分
+.user-info {
+  background-color: #f1f1f1;
+  padding:80px 50px;
+  font-size:20px;
+  font-family:$font1;
+}
+.mypagequestion{
+    with:90%;
+    margin: 80px 0 80px 50px;
+    max-width:1100px;
+}
+.mypage_question{
+    display:flex;
+    font-family:$font1;
+    justify-content:space-between;
+    align-items: center;
+    
+    li{
+        padding:5px 0;
+        &:first-child{
+            width:60%;
+        }
+        button{
+            color:black;
+            background:none;
+            border:none;
+        }
+
+    }
 }

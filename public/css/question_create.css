@@ -27,7 +27,8 @@ a.back-button {
   text-align: center;
   font-family: 'Kosugi Maru', sans-serif;
   font-size: 200%;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  margin: 50px 50px 20px;
   border-bottom: 2px dashed black;
 }
 .q-label {

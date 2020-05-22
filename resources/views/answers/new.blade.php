@@ -16,15 +16,17 @@
         </div>
       </div>
       <div class="form-group"> 
-        <div class="col-sm-offset-3 col-sm-6"> 
+        <div class="col-sm-offset-3 col-sm-6" id="question-answer-btn"> 
          <!--<h1>回答内容</h1>-->
          
            <textarea name="content" cols="50" rows="5" class="form-control"></textarea>
+           <p>
           <button type="submit" class="button ans_btn">
             <!--<i class="glyphicon">回答</i> -->
             回答を送信
           </button> <br>
           <button type="button" onclick="history.back()" class ="return">戻る</button>
+          </p>
         </div>
        <!-- <p class="blueBtn">回答します</p>
       -->
