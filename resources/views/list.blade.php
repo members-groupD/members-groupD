@@ -12,7 +12,7 @@
 <div class="topPage">
 
   <div class="questionWrapper col-sm-6 ">
-    <h2 class="question_title">{{$questions[0]->cate->cate}}質問一覧</h2>
+    <h2 class="question_title">{{$chose->cate}}質問一覧</h2>
      <div class="question-border">
      @foreach ($questions as $question) 
       <div class="question">
