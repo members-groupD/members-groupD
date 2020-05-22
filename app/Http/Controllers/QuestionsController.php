@@ -109,7 +109,7 @@ class QuestionsController extends Controller
         $question->cate_id = $request->cate_id;
         $question->save();
         
-        return redirect('/');
+        return redirect('/show');
     }
   
     public function destroy($question_id)
