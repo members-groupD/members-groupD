@@ -43,10 +43,22 @@ class AnswersController extends Controller
     $answers->question_id=$id;
     $answers->content=$request->content;
     $answers->save();
-    return redirect('/');
+       $question = Question::findOrFail($id);
+       $userId=$question->user_id;
+       $question['user']=User::findOrFail($userId);
+       $cateId=$question->cate_id;
+       $question['category']=Cate::findOrFail($cateId);
+       $question['my']= Auth::user()->id;
+       $answers=Answer::where('question_id', $id)->orderBy('created_at', 'asc')->get();
+       $alls=User::get();
+       foreach($answers as $answer){
+           $answerId=$answer->user_id;
+           $answer['user']=User::findOrFail($answerId);
+       }
+        return view('questions/show', ['question' => $question],['answers' => $answers]);
   }
   public function edit($question_id,$answer_id){
-      //eval(\Psy\Sh());
+
       $question = Question::find($question_id);
       $questions = Question::findOrFail($question_id);
       $userId=$questions->user_id;
